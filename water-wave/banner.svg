@@ -1,0 +1,187 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 1000 250"
+>
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <style>
+            @keyframes animate {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+            }
+
+            @keyframes rotate {
+            0% {
+                transform: rotate(3deg);
+            }
+            100% {
+                transform: rotate(-3deg);
+            }
+            }
+
+            @keyframes gradientBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+            }
+
+            @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            66% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+            }
+
+            
+            section {
+            position: relative;
+            width: 1000px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 15px;
+            }
+
+            section .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url(wave.png);
+            background-size: 600px 40px;
+            }
+
+            section .wave.wave1 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            }
+
+            section .wave.wave2 {
+            animation: animate 20s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            }
+
+            section .wave.wave3 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            }
+
+            section .wave.wave4 {
+            animation: animate 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            }
+
+            section .flipped {
+            top: 0;
+            }
+
+            section .wave.wave5 {
+            animation: animate 30s linear infinite;
+            z-index: 1000;
+            opacity: 1;
+            animation-delay: 0s;
+            transform: rotate(180deg);
+            }
+
+            section .wave.wave6 {
+            animation: animate 20s linear infinite;
+            z-index: 999;
+            opacity: 0.5;
+            animation-delay: -5s;
+            transform: rotate(180deg);
+            }
+
+            section .wave.wave7 {
+            animation: animate 30s linear infinite;
+            z-index: 998;
+            opacity: 0.2;
+            animation-delay: -2s;
+            transform: rotate(180deg);
+            }
+
+            section .wave.wave8 {
+            animation: animate 5s linear infinite;
+            z-index: 997;
+            opacity: 0.7;
+            animation-delay: -5s;
+            transform: rotate(180deg);
+            }
+
+            .container {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-align: center;
+            background: linear-gradient(-45deg, #fc5c7d, #6a82fb, #05dfd7);
+            background-size: 600% 400%;
+            animation: gradientBackground 10s ease infinite;
+            }
+
+            h1 {
+            font-size: 3em;
+            line-height: 1.3;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+                0 4px 0 #efefef, 0 12px 5px rgba(0, 0, 0, 0.1);
+            animation: rotate ease-in-out 1s infinite alternate;
+            margin: 0;
+            }
+
+            p {
+            font-size: 1em;
+            text-shadow: 0 1px 0 #efefef;
+            animation: 5s ease 0s normal forwards 1 fadeIn;
+            }
+        </style>
+        <section>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+
+            <div class="container">
+            <h1>Rajesh Ranjan</h1>
+            <p>
+                Full Stack Developer @Business Today Technology | India Today
+                Group
+            </p>
+            </div>
+
+            <div class="wave flipped wave5"></div>
+            <div class="wave flipped wave6"></div>
+            <div class="wave flipped wave7"></div>
+            <div class="wave flipped wave8"></div>
+        </section>
+        </div>
+    </foreignObject>
+</svg>
