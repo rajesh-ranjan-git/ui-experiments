@@ -1,0 +1,16 @@
+.glow-img {
+  filter: drop-shadow(0 0 5px #7e7e7e) drop-shadow(0 0 10px #7e7e7e);
+  animation: pulse 2s infinite;
+  transition: 0.3s;
+}
+
+/* Glow Pulse Animation */
+@keyframes pulse {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 5px #7e7e7e) drop-shadow(0 0 10px #7e7e7e);
+        }
+        50% {
+          filter: drop-shadow(0 0 10px #7e7e7e) drop-shadow(0 0 20px #7e7e7e);
+        }
+      }
