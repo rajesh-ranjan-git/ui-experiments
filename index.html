@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Portfolio Components</title>
+    <title>Masked Animated Image</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/globalStyles.css">
+    <link rel="stylesheet" href="/css/globalStyles.css" />
+    <link rel="stylesheet" href="/css/maskedImage.css" />
 
     <!-- Scripts -->
-     <script src="/js/globalJs.js" defer></script>
+    <script src="/js/globalJs.js" defer></script>
+    <script src="/js/maskedImage.js" defer></script>
   </head>
   <body>
-    <h1>New Portfolio Components</h1>
+    <div class="mask-container">
+      <div class="btnHeading">
+        <button onclick="replayAnimation()">Replay Masked Animation</button>
+        <h1>Masked Animated Image</h1>
+      </div>
+      <div class="color-image"></div>
+      <img src="/assets/bw-image.jpg" alt="bg-image" />
+    </div>
   </body>
 </html>
