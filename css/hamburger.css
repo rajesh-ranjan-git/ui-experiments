@@ -1,0 +1,54 @@
+.hamburger-container {
+    width: 6rem;
+    height: 5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger-container input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-container .line {
+    position: absolute;
+    width: 100%;
+    height: 16%;
+    background-color: #fff;
+    border-radius: 1rem;
+    transition: 0.3s all linear;
+}
+
+.hamburger-container .line-1 {
+    top: 0%;
+}
+
+.hamburger-container .line-2 {
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-container .line-3 {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.hamburger-container input:checked ~ .line-1 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.hamburger-container input:checked ~ .line-2 {
+    width: 0%;
+    opacity: 0%;
+}
+
+.hamburger-container input:checked ~ .line-3 {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
