@@ -8,13 +8,123 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 2em;
   flex-wrap: wrap;
   flex-direction: column;
   height: 100vh;
   background-color: #171717;
   color: #e5e5e5;
+  letter-spacing: 2px;
+}
+
+.dropdown-outer-wrapper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-inner-wrapper {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  background-color: purple;
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+button[popovertarget="menu-1"] {
+  anchor-name: --menu-button-1;
+}
+
+button[popovertarget="menu-2"] {
+  anchor-name: --menu-button-2;
+}
+
+button[popovertarget="menu-3"] {
+  anchor-name: --menu-button-3;
+}
+
+button[popovertarget="menu-4"] {
+  anchor-name: --menu-button-4;
+}
+
+.menu {
+  width: max-content;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background: white;
+  position: absolute;
+  top: anchor(bottom);
+  left: anchor(left);
+  position-try-fallbacks: --bottom-right, --bottom-left, --top-right, --top-left;
+}
+
+.menu:popover-open {
+  display: grid;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 0.7em 1.5em;
+  border-radius: 0.25em;
+  color: black;
+}
+
+.menu a:hover {
+  background: #eee;
+}
+
+#menu-1 {
+  position-anchor: --menu-button-1;
+}
+
+#menu-2 {
+  position-anchor: --menu-button-2;
+}
+
+#menu-3 {
+  position-anchor: --menu-button-3;
+}
+
+#menu-4 {
+  position-anchor: --menu-button-4;
+}
+
+@position-try --bottom-left {
+  inset: unset;
+  top: anchor(bottom);
+  right: anchor(right);
+}
+
+@position-try --bottom-right {
+  inset: unset;
+  top: anchor(bottom);
+  left: anchor(left);
+}
+
+@position-try --top-left {
+  inset: unset;
+  bottom: anchor(top);
+  right: anchor(right);
+}
+
+@position-try --top-right {
+  inset: unset;
+  bottom: anchor(top);
+  left: anchor(left);
 }
